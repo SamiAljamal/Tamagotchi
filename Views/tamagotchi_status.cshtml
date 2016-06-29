@@ -3,3 +3,26 @@
 <p>Happiness: @Model.GetHappiness()</p>
 <p>Cleanliness: @Model.GetCleanliness()</p>
 <p>Tiredness: @Model.GetTiredness()</p>
+
+if (@Model.Death())
+{
+  <p>
+    Oh no @Model.GetName() died! you terrible human being!
+  </p>
+}
+
+<form action = "/sleep" method= "post">
+  <button type="submit">go to sleep</button>
+</form>
+
+<form action = "/eat" method= "post">
+  <button type="submit">feed @Model.GetName()</button>
+</form>
+
+<form action = "/clean" method= "post">
+  <button type="submit">clean @Model.GetName()</button>
+</form>
+
+<form action = "/play" method= "post">
+  <button type="submit">play with @Model.GetName()</button>
+</form>
